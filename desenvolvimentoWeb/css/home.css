@@ -5,52 +5,78 @@
     list-style: none;
     font-family: "Montserrat", sans-serif;
 }
+header{
+    width: 100%;
+    background-color: #FCF1E8;
+    height: 100px;   
+}
 .grid{
     max-width: 1200px;
     margin: 0px auto;
+    padding: 0 20px;
 }
-
-header{
-    background-color: #54582f;
-    height: 100px;
- 
-}
-header div{
+header .grid{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 100%;
 }
-header div img{
-    width: 100px;
+.logo{
+    display: flex;
+    align-items: center;
+    font-family: "Alegreya", sans-serif;
 }
-
-header nav ul{
+.logo img{
+    width: 12%;
+}
+.socialmedia{
     display: flex;
     gap: 20px;
-    color: beige;
 }
-#home{
-    border: 1px solid red;
-    background-image: url("../assets/img/jpg/cachorro.jpg");
-    height: 70vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: beige;
+.sessao_titulo{
+    border: 1px solid rgb(0, 8, 255);
     display: flex;
-    justify-content: flex-end;
     align-items: center;
 }
-h1{
-    font-size: 3rem;
-}
-#home div p{
-    font-size: 1rem;
-}
-#home div{
+.titulo{
     border: 1px solid red;
     display: flex;
     flex-direction: column;
-    margin-right: 10%;
-    max-width: 486px;
+    justify-content: space-between;
+    width:fit-content;
+    height: 100%;
+    font-size: 1.2rem;
 }
-
+.titulo h1{
+    font-family: "Alegreya", sans-serif;
+    font-size: 3rem;
+}
+.titulo p{
+    width: 70%;
+}
+.titulo a{
+    padding: 1%;
+    border-radius: 5px;
+    width: 120px;
+    height: 30px;
+    background-color: palevioletred;
+}
+.img_titulo{
+    height: 100%;
+    width: 40%;
+}
+.img_titulo img{
+    width: 100%;
+    height: fit-content;
+}
+.hm{
+    display: none;
+}
+@media screen and (max-width: 1024px) {
+    .socialmedia{
+        display: none;
+    }
+    .hm{
+        display: block;
+    }
+  }
