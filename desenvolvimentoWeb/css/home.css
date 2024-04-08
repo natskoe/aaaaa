@@ -10,6 +10,7 @@ body{
     overflow-x: hidden;
 }
 header{
+    z-index: 2;
     background-color: #FCF1E8;
     width: 100%;
     height: 100px; 
@@ -175,7 +176,267 @@ section{
     font-weight: 500;
 }
 /* fim quarta sesaso */
+/* inicio quinta sessao */
+.sessao_planos{
+    background-color: #E38D8A;
+}
+.titulo_sessao_plano{
+    padding: 30px;
+}
+.titulo_sessao_plano p{
+    text-align: center;
+    font-family: "Alegreya", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+}
+.planos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.planos_iguais{
+    border: black 1px solid;
+    padding: 20px;
+    width: 30rem;
+    height: 25rem;
+}
+.plano_simples{
+    border-radius: 8px 0 0 8px;
+}
+.plano_artistico{
+    border-radius: 0 8px 8px 0;
+}
+.plano_avancado{
+    border: black 2px solid;
+    padding: 32px 20px;
+    width: 30rem;
+    height: 27rem;
+    border-radius: 8px;
+}
+.plano_avancado .botao_popular{
+    padding-bottom: 10px;
+}
+.plano_avancado .plano_indicado{
+    background-color: black;
+    padding: 5px 8px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+}
+.nome_plano{
+    font-family: "Alegreya", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: start;
+    padding-bottom: 16px;
+}
+.preco_plano p{
+    font-family: "Alegreya", sans-serif;
+    font-size: 40px;
+}
+.botao_plano{
+    padding: 32px 0;
+    display: flex;
+    justify-content: center;
+}
+.botao_plano a{
+    width: 100%;
+    padding: 10px 0px;
+    background-color: #FCF1E8;
+    border-radius: 8px;
+    color: black;
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+}
+.descricao_plano p{
+    padding-bottom: 32px;
+}
+/* fim quinta sessao */
+/* inicio sexta sessao */
+.servicos_oferecidos{
+    display: flex;
+    align-items: center;
+}
+.perguntas {
+    width: 100%;
+}
+.titulo_perguntas{
+    padding-bottom: 40px;
+}
+.titulo_perguntas h2{
+    font-family: "Alegreya", sans-serif;
+    font-size: 64px;
+    font-weight: 600;
+}
+.faq .pergunta_faq {
+  border-bottom: 1px solid #e5e5e5;
+}
 
+.faq .pergunta_faq button[aria-expanded='true'] {
+  border-bottom: 1px solid #E38D8A;
+}
+
+.faq .pergunta_faq button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em 0;
+  color: #7288a2;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.faq .pergunta_faq button:hover,
+.faq .pergunta_faq button:focus {
+  cursor: pointer;
+  color: #E38D8A;
+}
+
+.faq .pergunta_faq button:hover::after,
+.faq .pergunta_faq button:focus::after {
+  cursor: pointer;
+  color: #E38D8A;
+  border: 1px solid #E38D8A;
+}
+
+.faq .pergunta_faq button .titulo_pergunta_faq {
+  padding: 1em 1.5em 1em 0;
+  font-family: "Alegreya", sans-serif;
+  color: black;
+  font-size: 32px;
+}
+
+.faq .pergunta_faq button .icone_exibe {
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid;
+  border-radius: 22px;
+}
+
+.faq .pergunta_faq button .icone_exibe::before {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+}
+
+.faq .pergunta_faq button .icone_exibe::after {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+}
+
+.faq .pergunta_faq button[aria-expanded='true'] {
+  color: #E38D8A;
+}
+
+.faq .pergunta_faq button[aria-expanded='true'] .icone_exibe::after {
+  width: 0;
+}
+
+.faq .pergunta_faq button[aria-expanded='true'] + .resposta_pergunta {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+
+.faq .pergunta_faq .resposta_pergunta {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+
+.faq .pergunta_faq .resposta_pergunta p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 2em 0;
+}
+/* fim sexta sessao */
+/* inicio setima sessao */
+.contato{
+    border: blue 1px solid;
+    display: flex;
+    justify-content: space-between;
+}
+.nome_email{
+    padding-top: 50px;
+    display: flex;
+    gap: 20px;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.input .input_campo{
+    background-color: rgba(87, 78, 68, 0.178);
+    border-radius: 4px;
+    border: none;
+    height: 30px;
+    padding: 10px;
+}
+.input textarea{
+    background-color: rgba(87, 78, 68, 0.178);
+    border-radius: 4px;
+    border: none;
+    height: 150px;
+    padding: 10px;
+    resize: none;
+}
+.formulario_contato{
+    border: red 1px solid;
+    width: 50%;
+}
+.texto_entrar_contato{
+    border: green 1px solid;
+    display: flex;
+}
+.texto_entrar_contato p{
+    font-family: "Alegreya", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+}
+.texto_entrar_contato span{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
+/* .botao_veja{
+    height: fit-content;
+    padding: 14px 0;
+}
+.botao_veja a{
+    background-color: #E38D8A;
+    padding: 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    color:black;
+    font-size: 20px;
+} */
+/* fim setima sessao */
 @media screen and (max-width: 1024px) {
     .socialmedia{
         display: none;
