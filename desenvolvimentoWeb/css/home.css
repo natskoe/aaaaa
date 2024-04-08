@@ -5,10 +5,16 @@
     list-style: none;
     font-family: "Montserrat", sans-serif;
 }
-header{
-    width: 100%;
+body{
     background-color: #FCF1E8;
-    height: 100px;   
+    overflow-x: hidden;
+}
+header{
+    background-color: #FCF1E8;
+    width: 100%;
+    height: 100px; 
+    position: fixed;  
+    box-shadow: 0.4em 0.4em 2em -10px rgba(128, 128, 128, 0.719);
 }
 .grid{
     max-width: 1200px;
@@ -24,6 +30,8 @@ header .grid{
 .logo{
     display: flex;
     align-items: center;
+}
+.logo span{
     font-family: "Alegreya", sans-serif;
 }
 .logo img{
@@ -33,45 +41,141 @@ header .grid{
     display: flex;
     gap: 20px;
 }
-.sessao_titulo{
-    border: 1px solid rgb(0, 8, 255);
-    display: flex;
-    align-items: center;
-}
-.titulo{
-    border: 1px solid red;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width:fit-content;
-    height: 100%;
-    font-size: 1.2rem;
-}
-.titulo h1{
-    font-family: "Alegreya", sans-serif;
-    font-size: 3rem;
-}
-.titulo p{
-    width: 70%;
-}
-.titulo a{
-    padding: 1%;
-    border-radius: 5px;
-    width: 120px;
-    height: 30px;
-    background-color: palevioletred;
-}
-.img_titulo{
-    height: 100%;
-    width: 40%;
-}
-.img_titulo img{
-    width: 100%;
-    height: fit-content;
-}
 .hm{
     display: none;
 }
+/* fim do header */
+/* começo sessao 1 */
+section{
+    /* parâmetros válidos para >todas< as sessões */
+    height: 100vh;
+}
+.sessao_principal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.titulo_sessao_principal{
+    width: 50%;
+}
+.titulo_texto h1{
+    width: 80%;
+    font-family: "Alegreya", sans-serif;
+    font-size: 64px;
+}
+.titulo_sessao_principal p{
+    font-size: 24px;
+    margin: 32px 0;
+}
+.botao_veja{
+    height: fit-content;
+    padding: 14px 0;
+}
+.botao_veja a{
+    background-color: #E38D8A;
+    padding: 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    color:black;
+    font-size: 20px;
+}
+.imagem img{
+    width: 28vw;
+    margin:auto;
+}
+/* fim primeira sessao */
+/* começo segunda sessao */
+.sessao_secundaria{
+    background: url("../assets/img/jpeg/fundo_sessao.jpeg") no-repeat center;
+    background-size: cover;
+}
+.background_pink{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #e38d8a91;
+}
+.texto_sessao_secundaria{
+    margin: auto;
+}
+.titulo_s2{
+    width: 40%;
+    margin: 0 auto;
+}
+.titulo_s2 h2{
+    font-family: "Alegreya", sans-serif; 
+    font-size: 64px;
+    text-align: center;
+}
+.subtitulo_s2{
+    padding-top: 8px;
+    width: 58%;
+    margin: 0 auto;
+}
+.subtitulo_s2 p{
+    font-size: 24px;
+    text-align: center;
+}
+/* fim segunda sessao */
+/* começo terceira sessao */
+.sessao_grid{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.titulo_pacotes_grid{
+    font-family: "Alegreya", sans-serif;
+    font-size: 40px;
+}
+.pacotes_grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+    overflow: auto;
+}
+.pacotes_grid .item{
+    padding: 10px 15px;
+    margin: 10px;
+}
+.pacotes_grid .item span{
+    font-family: "Alegreya", sans-serif;
+    font-size: 24px;
+}
+.pacotes_grid .item img{
+    width: 100%;
+    min-height: 230px;
+    max-height: 230px;
+    object-fit: cover;
+}
+/* fim terceira sessao */
+/* início quarta sessao*/
+.sessao_comentario{
+    background-color: #E38D8A;
+}
+.icon{
+    padding: 20px 0px;
+}
+.icon img{
+    border-radius: 100%;
+    width: 10%;
+}
+.sessao_comentario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.texto_avaliacao .avaliacao{
+    margin-bottom: 20px;
+    font-family: "Alegreya", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+.texto_avaliacao .autor_avaliacao{
+    font-size: 16px;
+    font-weight: 500;
+}
+/* fim quarta sesaso */
+
 @media screen and (max-width: 1024px) {
     .socialmedia{
         display: none;
@@ -79,4 +183,4 @@ header .grid{
     .hm{
         display: block;
     }
-  }
+}
