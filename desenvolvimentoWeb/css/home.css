@@ -375,13 +375,18 @@ section{
 }
 /* fim sexta sessao */
 /* inicio setima sessao */
+.sessao_mapa{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
 .contato{
-    border: blue 1px solid;
     display: flex;
     justify-content: space-between;
 }
 .nome_email{
-    padding-top: 50px;
+    padding: 20px 0px;
+    
     display: flex;
     gap: 20px;
 }
@@ -406,37 +411,69 @@ section{
     resize: none;
 }
 .formulario_contato{
-    border: red 1px solid;
     width: 50%;
 }
 .texto_entrar_contato{
-    border: green 1px solid;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px;
+    margin-bottom: 20px;
 }
 .texto_entrar_contato p{
     font-family: "Alegreya", sans-serif;
     font-size: 32px;
     font-weight: 600;
+    margin-bottom: 20px;
 }
 .texto_entrar_contato span{
     font-size: 15px;
     font-weight: 400;
 }
-
-
-/* .botao_veja{
-    height: fit-content;
-    padding: 14px 0;
+.confirmar_envio{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
 }
-.botao_veja a{
+.confirmar_envio .politica_termo{
+    width: 70%;
+}
+.confirmar_envio .politica_termo p{
+    font-size: 10px;
+
+}
+.confirmar_envio button{
     background-color: #E38D8A;
-    padding: 14px;
+    border: none;
     border-radius: 8px;
-    text-decoration: none;
-    color:black;
-    font-size: 20px;
-} */
+    padding: 10px 32px;
+}
+.confirmar_envio .botao_enviar{
+    display: flex;
+    align-items: center;
+}
 /* fim setima sessao */
+/* inicio oitava sessao */
+footer{
+    margin-top: 60px;
+}
+.logo_footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo_footer img{
+    padding: 8px;
+    width: 3%;
+}
+.logo_footer span{
+    font-family: "Alegreya", sans-serif;
+    font-size: 20px;
+}
+.redes_sociais img{
+    width: 8rem;
+}
+/* fim oitava sessao */
 @media screen and (max-width: 1024px) {
     .socialmedia{
         display: none;
