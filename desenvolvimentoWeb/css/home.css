@@ -5,10 +5,17 @@
     list-style: none;
     font-family: "Montserrat", sans-serif;
 }
-header{
-    width: 100%;
+body{
     background-color: #FCF1E8;
-    height: 100px;   
+    overflow-x: hidden;
+}
+header{
+    z-index: 2;
+    background-color: #FCF1E8;
+    width: 100%;
+    height: 100px; 
+    position: fixed;  
+    box-shadow: 0.4em 0.4em 2em -10px rgba(128, 128, 128, 0.719);
 }
 .grid{
     max-width: 1200px;
@@ -24,6 +31,8 @@ header .grid{
 .logo{
     display: flex;
     align-items: center;
+}
+.logo span{
     font-family: "Alegreya", sans-serif;
 }
 .logo img{
@@ -33,45 +42,438 @@ header .grid{
     display: flex;
     gap: 20px;
 }
-.sessao_titulo{
-    border: 1px solid rgb(0, 8, 255);
-    display: flex;
-    align-items: center;
-}
-.titulo{
-    border: 1px solid red;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width:fit-content;
-    height: 100%;
-    font-size: 1.2rem;
-}
-.titulo h1{
-    font-family: "Alegreya", sans-serif;
-    font-size: 3rem;
-}
-.titulo p{
-    width: 70%;
-}
-.titulo a{
-    padding: 1%;
-    border-radius: 5px;
-    width: 120px;
-    height: 30px;
-    background-color: palevioletred;
-}
-.img_titulo{
-    height: 100%;
-    width: 40%;
-}
-.img_titulo img{
-    width: 100%;
-    height: fit-content;
-}
 .hm{
     display: none;
 }
+/* fim do header */
+/* começo sessao 1 */
+section{
+    /* parâmetros válidos para >todas< as sessões */
+    height: 100vh;
+}
+.sessao_principal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.titulo_sessao_principal{
+    width: 50%;
+}
+.titulo_texto h1{
+    width: 80%;
+    font-family: "Alegreya", sans-serif;
+    font-size: 64px;
+}
+.titulo_sessao_principal p{
+    font-size: 24px;
+    margin: 32px 0;
+}
+.botao_veja{
+    height: fit-content;
+    padding: 14px 0;
+}
+.botao_veja a{
+    background-color: #E38D8A;
+    padding: 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    color:black;
+    font-size: 20px;
+}
+.imagem img{
+    width: 28vw;
+    margin:auto;
+}
+/* fim primeira sessao */
+/* começo segunda sessao */
+.sessao_secundaria{
+    background: url("../assets/img/jpeg/fundo_sessao.jpeg") no-repeat center;
+    background-size: cover;
+}
+.background_pink{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #e38d8a91;
+}
+.texto_sessao_secundaria{
+    margin: auto;
+}
+.titulo_s2{
+    width: 40%;
+    margin: 0 auto;
+}
+.titulo_s2 h2{
+    font-family: "Alegreya", sans-serif; 
+    font-size: 64px;
+    text-align: center;
+}
+.subtitulo_s2{
+    padding-top: 8px;
+    width: 58%;
+    margin: 0 auto;
+}
+.subtitulo_s2 p{
+    font-size: 24px;
+    text-align: center;
+}
+/* fim segunda sessao */
+/* começo terceira sessao */
+.sessao_grid{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.titulo_pacotes_grid{
+    font-family: "Alegreya", sans-serif;
+    font-size: 40px;
+}
+.pacotes_grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+    overflow: auto;
+}
+.pacotes_grid .item{
+    padding: 10px 15px;
+    margin: 10px;
+}
+.pacotes_grid .item span{
+    font-family: "Alegreya", sans-serif;
+    font-size: 24px;
+}
+.pacotes_grid .item img{
+    width: 100%;
+    min-height: 230px;
+    max-height: 230px;
+    object-fit: cover;
+}
+/* fim terceira sessao */
+/* início quarta sessao*/
+.sessao_comentario{
+    background-color: #E38D8A;
+}
+.icon{
+    padding: 20px 0px;
+}
+.icon img{
+    border-radius: 100%;
+    width: 10%;
+}
+.sessao_comentario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.texto_avaliacao .avaliacao{
+    margin-bottom: 20px;
+    font-family: "Alegreya", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+.texto_avaliacao .autor_avaliacao{
+    font-size: 16px;
+    font-weight: 500;
+}
+/* fim quarta sesaso */
+/* inicio quinta sessao */
+.sessao_planos{
+    background-color: #E38D8A;
+}
+.titulo_sessao_plano{
+    padding: 30px;
+}
+.titulo_sessao_plano p{
+    text-align: center;
+    font-family: "Alegreya", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+}
+.planos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.planos_iguais{
+    border: black 1px solid;
+    padding: 20px;
+    width: 30rem;
+    height: 25rem;
+}
+.plano_simples{
+    border-radius: 8px 0 0 8px;
+}
+.plano_artistico{
+    border-radius: 0 8px 8px 0;
+}
+.plano_avancado{
+    border: black 2px solid;
+    padding: 32px 20px;
+    width: 30rem;
+    height: 27rem;
+    border-radius: 8px;
+}
+.plano_avancado .botao_popular{
+    padding-bottom: 10px;
+}
+.plano_avancado .plano_indicado{
+    background-color: black;
+    padding: 5px 8px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+}
+.nome_plano{
+    font-family: "Alegreya", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: start;
+    padding-bottom: 16px;
+}
+.preco_plano p{
+    font-family: "Alegreya", sans-serif;
+    font-size: 40px;
+}
+.botao_plano{
+    padding: 32px 0;
+    display: flex;
+    justify-content: center;
+}
+.botao_plano a{
+    width: 100%;
+    padding: 10px 0px;
+    background-color: #FCF1E8;
+    border-radius: 8px;
+    color: black;
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+}
+.descricao_plano p{
+    padding-bottom: 32px;
+}
+/* fim quinta sessao */
+/* inicio sexta sessao */
+.servicos_oferecidos{
+    display: flex;
+    align-items: center;
+}
+.perguntas {
+    width: 100%;
+}
+.titulo_perguntas{
+    padding-bottom: 40px;
+}
+.titulo_perguntas h2{
+    font-family: "Alegreya", sans-serif;
+    font-size: 64px;
+    font-weight: 600;
+}
+.faq .pergunta_faq {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.faq .pergunta_faq button[aria-expanded='true'] {
+  border-bottom: 1px solid #E38D8A;
+}
+
+.faq .pergunta_faq button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em 0;
+  color: #7288a2;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.faq .pergunta_faq button:hover,
+.faq .pergunta_faq button:focus {
+  cursor: pointer;
+  color: #E38D8A;
+}
+
+.faq .pergunta_faq button:hover::after,
+.faq .pergunta_faq button:focus::after {
+  cursor: pointer;
+  color: #E38D8A;
+  border: 1px solid #E38D8A;
+}
+
+.faq .pergunta_faq button .titulo_pergunta_faq {
+  padding: 1em 1.5em 1em 0;
+  font-family: "Alegreya", sans-serif;
+  color: black;
+  font-size: 32px;
+}
+
+.faq .pergunta_faq button .icone_exibe {
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid;
+  border-radius: 22px;
+}
+
+.faq .pergunta_faq button .icone_exibe::before {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+}
+
+.faq .pergunta_faq button .icone_exibe::after {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+}
+
+.faq .pergunta_faq button[aria-expanded='true'] {
+  color: #E38D8A;
+}
+
+.faq .pergunta_faq button[aria-expanded='true'] .icone_exibe::after {
+  width: 0;
+}
+
+.faq .pergunta_faq button[aria-expanded='true'] + .resposta_pergunta {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+
+.faq .pergunta_faq .resposta_pergunta {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+
+.faq .pergunta_faq .resposta_pergunta p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 2em 0;
+}
+/* fim sexta sessao */
+/* inicio setima sessao */
+.sessao_mapa{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.contato{
+    display: flex;
+    justify-content: space-between;
+}
+.nome_email{
+    padding: 20px 0px;
+    
+    display: flex;
+    gap: 20px;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.input .input_campo{
+    background-color: rgba(87, 78, 68, 0.178);
+    border-radius: 4px;
+    border: none;
+    height: 30px;
+    padding: 10px;
+}
+.input textarea{
+    background-color: rgba(87, 78, 68, 0.178);
+    border-radius: 4px;
+    border: none;
+    height: 150px;
+    padding: 10px;
+    resize: none;
+}
+.formulario_contato{
+    width: 50%;
+}
+.texto_entrar_contato{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px;
+    margin-bottom: 20px;
+}
+.texto_entrar_contato p{
+    font-family: "Alegreya", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.texto_entrar_contato span{
+    font-size: 15px;
+    font-weight: 400;
+}
+.confirmar_envio{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.confirmar_envio .politica_termo{
+    width: 70%;
+}
+.confirmar_envio .politica_termo p{
+    font-size: 10px;
+
+}
+.confirmar_envio button{
+    background-color: #E38D8A;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 32px;
+}
+.confirmar_envio .botao_enviar{
+    display: flex;
+    align-items: center;
+}
+/* fim setima sessao */
+/* inicio oitava sessao */
+footer{
+    margin-top: 60px;
+}
+.logo_footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo_footer img{
+    padding: 8px;
+    width: 3%;
+}
+.logo_footer span{
+    font-family: "Alegreya", sans-serif;
+    font-size: 20px;
+}
+.redes_sociais img{
+    width: 8rem;
+}
+/* fim oitava sessao */
 @media screen and (max-width: 1024px) {
     .socialmedia{
         display: none;
@@ -79,4 +481,4 @@ header .grid{
     .hm{
         display: block;
     }
-  }
+}
